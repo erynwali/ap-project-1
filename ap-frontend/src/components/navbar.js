@@ -9,9 +9,9 @@ import "../App.css";
 export default class NavbarComp extends Component {
   render() {
     return (        
-        <Navbar fixed="top" collapseOnSelect expand="lg" bg="light" variant="light">
+        <Navbar id="main-navbar"fixed="top" collapseOnSelect expand="lg" bg="light" variant="light">
           <Container>
-          <Navbar.Brand href="#home"><img src = "https://res.cloudinary.com/dejzdjexf/image/upload/v1636476022/esa_logo_transparent_fp2tti.png" height = "60px" alt="ESA"/></Navbar.Brand>
+          <Navbar.Brand href="#home"><img src = "https://res.cloudinary.com/dejzdjexf/image/upload/v1636476022/esa_logo_transparent_fp2tti.png" height = "50px" width="100%" alt="ESA"/></Navbar.Brand>
           <div>
           </div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
