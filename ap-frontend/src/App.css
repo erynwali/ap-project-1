@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+* {
+  font-family: 'Quicksand', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  background-color: #f3c9ed;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  height: 17%;
+  width: 100%;
+  font-size: large;
+  margin-top: 5%;
+  
+}
+
+a:link {
+  color: #2f232a;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
