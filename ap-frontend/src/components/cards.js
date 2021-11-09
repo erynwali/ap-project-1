@@ -6,7 +6,7 @@ import "../App.css";
 export default class CardComp extends Component {
     render() {
       return (
-        
+        <div>
         <CardGroup>
         <Card>
             <Card.Img variant="top" src="holder.js/100px160" />
@@ -17,9 +17,6 @@ export default class CardComp extends Component {
                 additional content. This content is a little bit longer.
             </Card.Text>
             </Card.Body>
-            <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
-            </Card.Footer>
         </Card>
         <Card>
             <Card.Img variant="top" src="holder.js/100px160" />
@@ -30,9 +27,6 @@ export default class CardComp extends Component {
                 content.{' '}
             </Card.Text>
             </Card.Body>
-            <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
-            </Card.Footer>
         </Card>
         <Card>
             <Card.Img variant="top" src="holder.js/100px160" />
@@ -44,11 +38,9 @@ export default class CardComp extends Component {
                 show that equal height action.
             </Card.Text>
             </Card.Body>
-            <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
-            </Card.Footer>
         </Card>
         </CardGroup>
+        </div>
 
       )
     } 
