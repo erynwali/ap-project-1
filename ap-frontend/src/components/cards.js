@@ -6,49 +6,43 @@ import "../App.css";
 export default class CardComp extends Component {
     render() {
       return (
-        
-        <CardGroup>
+        <div>
+        <CardGroup style={{
+            paddingTop: "7%", 
+            paddingLeft: "10%", 
+            paddingRight: "10%", 
+            borderRadius: "200px"
+
+        }}>
         <Card>
-            <Card.Img variant="top" src="holder.js/100px160" />
-            <Card.Body>
-            <Card.Title>Women</Card.Title>
-            <Card.Text>
-                This is a wider card with supporting text below as a natural lead-in to
-                additional content. This content is a little bit longer.
-            </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
-            </Card.Footer>
-        </Card>
-        <Card>
-            <Card.Img variant="top" src="holder.js/100px160" />
+            <Card.Img variant="top" src="https://res.cloudinary.com/dejzdjexf/image/upload/v1636493197/cards.js/model01_zuoi9i.jpg" />
             <Card.Body>
             <Card.Title>Men</Card.Title>
             <Card.Text>
-                This card has supporting text below as a natural lead-in to additional
-                content.{' '}
+                Shop Men Here
             </Card.Text>
             </Card.Body>
-            <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
-            </Card.Footer>
         </Card>
         <Card>
-            <Card.Img variant="top" src="holder.js/100px160" />
+            <Card.Img variant="top" src="https://res.cloudinary.com/dejzdjexf/image/upload/v1636493177/cards.js/model01_rzkjqc.jpg" />
             <Card.Body>
-            <Card.Title>Card title</Card.Title>
+            <Card.Title>Women</Card.Title>
             <Card.Text>
-                This is a wider card with supporting text below as a natural lead-in to
-                additional content. This card has even longer content than the first to
-                show that equal height action.
+                Shop Women Here{' '}
             </Card.Text>
             </Card.Body>
-            <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
-            </Card.Footer>
+        </Card>
+        <Card>
+            <Card.Img variant="top" src="https://res.cloudinary.com/dejzdjexf/image/upload/v1636493434/cards.js/model01_svdnwt.jpg" />
+            <Card.Body>
+            <Card.Title>Sale</Card.Title>
+            <Card.Text>
+                Shop Sale Here
+            </Card.Text>
+            </Card.Body>
         </Card>
         </CardGroup>
+        </div>
 
       )
     } 
