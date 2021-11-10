@@ -15,6 +15,7 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs"
 import { useAuth0 } from "@auth0/auth0-react";
+import CardComp from './components/cards';
 
 function App() {
 
@@ -49,8 +50,16 @@ function App() {
 
       </Routes>
 
+      <CardComp />
+
+      
+
       <FooterComp />
       </div>
+      
+
+      
+
 
     
     
