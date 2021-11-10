@@ -13,13 +13,13 @@ export default class FooterComp extends Component{
             alt="ESA"
           />
         <div className="a:link">
-            <Nav.Link href="#about-us">
+            <Nav.Link href="about-us">
                 About Us
             </Nav.Link>
-            <Nav.Link href="#terms-and-conditions">
+            <Nav.Link href="terms-and-conditions">
                 Terms and Conditions
             </Nav.Link>
-            <Nav.Link href="#contact-us">
+            <Nav.Link href="contact-us">
                 Contact Us
             </Nav.Link>
         </div> 
