@@ -19,40 +19,24 @@ import CardComp from './components/cards';
 
 function App() {
 
-  const LoginButton = () => {
-    const { loginWithRedirect } = useAuth0();
-    return (
-      <button onClick={() => loginWithRedirect()}>Login</button>
-    )}
-      
+  
 
   
 
   return (
     <div>
-    
   
-  
-      
       <NavbarComp />  
-      <div style = {{marginTop: "10%"}}>
-      {LoginButton()}
       
-      </div>
-      
-
       <Routes> 
       
       <Route exact path="/" element={<Home/>}/>
       <Route exact path="/about-us" element={<AboutUs/>}/>
       <Route exact path="/contact-us" element={<ContactUs/>}/>
       <Route exact path="/terms-and-conditions" element={<TnC/>}/>
+      <Route exact path="/results" element={<TnC/>}/>
 
       </Routes>
-
-      <CardComp />
-
-      
 
       <FooterComp />
       </div>
