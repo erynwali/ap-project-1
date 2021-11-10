@@ -5,13 +5,28 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import Container from 'react-bootstrap/Container'
 import { InputGroup, FormControl } from "react-bootstrap";
 import "../App.css";
+import { useAuth0 } from "@auth0/auth0-react";
+
+// const LoginButton = function() {
+//   const { loginWithRedirect } = useAuth0();
+//   return (
+//     // <button onClick={() => loginWithRedirect()}>Login</button>
+//   )}
 
 export default class NavbarComp extends Component {
+
+    
   render() {
-    return (        
-        <Navbar fixed="top" collapseOnSelect expand="lg" bg="light" variant="light">
+
+    // <div style = {{marginTop: "10%"}}>
+    //   {LoginButton()}
+      
+    //   </div>
+    return ( 
+       
+        <Navbar id="main-navbar" fixed="top" collapseOnSelect expand="lg" bg="light" variant="light">
           <Container>
-          <Navbar.Brand href="#home"><img src = "https://res.cloudinary.com/dejzdjexf/image/upload/v1636476022/esa_logo_transparent_fp2tti.png" height = "60px" alt="ESA"/></Navbar.Brand>
+          <Navbar.Brand href="/"><img src = "https://res.cloudinary.com/dejzdjexf/image/upload/v1636476022/esa_logo_transparent_fp2tti.png" height = "60px" alt="ESA"/></Navbar.Brand>
           <div>
           </div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
