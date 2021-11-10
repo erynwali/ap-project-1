@@ -1,8 +1,8 @@
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import NavbarComp from "./components/navbar";
 import FooterComp from "./components/footer"; 
 import CarouselComp from './components/carousel';
+import Homepage from './pages/homepage'; 
 import CardComp from './components/cards';
 
 function App() {
@@ -11,9 +11,10 @@ function App() {
 
       <div> <NavbarComp /> </div> 
 
-      <div> <CarouselComp /> </div>
-
-      <div> <CardComp /> </div>
+      <div>
+          <CarouselComp />
+          <CardComp />
+      </div>
 
       <div> <FooterComp /></div>
 

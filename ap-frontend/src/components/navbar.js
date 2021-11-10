@@ -32,7 +32,7 @@ export default class NavbarComp extends Component {
             </Nav>
             <Nav style =
             {{ paddingTop: "17px", 
-              paddingRight: "20px"
+              paddingRight: "20px", 
             }}
             >
               <InputGroup size="sm" className="mb-3">

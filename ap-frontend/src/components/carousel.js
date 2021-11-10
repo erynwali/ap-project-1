@@ -13,7 +13,7 @@ export default class CarouselComp extends Component {
             backgroundColor: "#fff",
             height: "100%",
             marginLeft: "15%",
-            marginTop: "5%", 
+            marginTop: "10%", 
             width: "70%"
         }}>
         <Carousel.Item>
