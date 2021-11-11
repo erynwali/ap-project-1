@@ -35,3 +35,16 @@ a:link {
   height: 15%;
   background-color:"green";
 }
+
+.product-card-title {
+  
+  font-family: "Quicksand";
+  font-weight: bold;
+  text-align: center;
+  
+}
+.product-card-text {
+  font-family: "Quicksand";
+  text-align: center;
+  margin-bottom: "500px";
+}

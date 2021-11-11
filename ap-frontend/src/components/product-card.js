@@ -6,9 +6,7 @@ import "../App.css";
 export default class ProductCardComp extends Component {
     render() {
       return (
-        <div>
-
-            {/* <h1>{this.props.name}</h1> */}
+       
         
         <Card style={{width : "20%"}}>
             <Card.Img variant="top" src={this.props.src} />
@@ -19,7 +17,6 @@ export default class ProductCardComp extends Component {
             </Card.Text>
             </Card.Body>
         </Card>
-        </div>
       )
     } 
 } 

@@ -13,9 +13,11 @@ import CarouselComp from './components/carousel';
 import TnC from "./pages/T&C";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
-import ContactUs from "./pages/ContactUs"
+import ContactUs from "./pages/ContactUs";
+import Results from "./pages/Results";
 import { useAuth0 } from "@auth0/auth0-react";
 import CardComp from './components/cards';
+import ProductCardComp from './components/product-card'
 
 function App() {
 
@@ -26,7 +28,7 @@ function App() {
   return (
     <div>
   
-      <NavbarComp />  
+      <NavbarComp />   
       
       <Routes> 
       
@@ -34,9 +36,12 @@ function App() {
       <Route exact path="/about-us" element={<AboutUs/>}/>
       <Route exact path="/contact-us" element={<ContactUs/>}/>
       <Route exact path="/terms-and-conditions" element={<TnC/>}/>
-      <Route exact path="/results" element={<TnC/>}/>
+      <Route exact path="/results" element={<Results/>}/>
 
       </Routes>
+
+
+      {/* <ProductCardComp/> */}
 
       <FooterComp />
       </div>
