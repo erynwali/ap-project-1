@@ -16,42 +16,35 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs"
 import { useAuth0 } from "@auth0/auth0-react";
 import CardComp from './components/cards';
+import Results from './pages/Results';
+import LoginButton from './components/login-button';
+import Profile from './components/profile';
+
 
 function App() {
 
-  const LoginButton = () => {
-    const { loginWithRedirect } = useAuth0();
-    return (
-      <button onClick={() => loginWithRedirect()}>Login</button>
-    )}
-      
-
   
-
   return (
     <div>
     
   
   
       
-      <NavbarComp />  
-      <div style = {{marginTop: "10%"}}>
-      {LoginButton()}
+      {/* <NavbarComp />   */}
       
-      </div>
-      
-
+      <LoginButton/>
+      <Profile/>
       <Routes> 
       
       <Route exact path="/" element={<Home/>}/>
       <Route exact path="/about-us" element={<AboutUs/>}/>
       <Route exact path="/contact-us" element={<ContactUs/>}/>
       <Route exact path="/terms-and-conditions" element={<TnC/>}/>
+      <Route exact path="/results" element={<Results/>}></Route>
 
       </Routes>
 
-      <CardComp />
-
+      
       
 
       <FooterComp />

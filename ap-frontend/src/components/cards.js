@@ -15,7 +15,7 @@ export default class CardComp extends Component {
 
         }}>
         <Card>
-            <Card.Img variant="top" src="https://res.cloudinary.com/dejzdjexf/image/upload/v1636493197/cards.js/model01_zuoi9i.jpg" />
+            <Card.Img variant="top" src="https://res.cloudinary.com/dejzdjexf/image/upload/v1636493197/cards.js/model01_zuoi9i.jpg"/>
             <Card.Body>
             <Card.Title>Men</Card.Title>
             <Card.Text>

@@ -5,6 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import Container from 'react-bootstrap/Container'
 import { InputGroup, FormControl } from "react-bootstrap";
 import "../App.css";
+import LoginButton from "../components/login-button"
 import { useAuth0 } from "@auth0/auth0-react";
 
 // const LoginButton = function() {
@@ -24,9 +25,9 @@ export default class NavbarComp extends Component {
     //   </div>
     return ( 
        
-        <Navbar id="main-navbar" fixed="top" collapseOnSelect expand="lg" bg="light" variant="light">
+        <Navbar id="main-navbar" fixed="top" collapseOnSelect expand="lg" bg="myRed" variant="light">
           <Container>
-          <Navbar.Brand href="/"><img src = "https://res.cloudinary.com/dejzdjexf/image/upload/v1636476022/esa_logo_transparent_fp2tti.png" height = "60px" alt="ESA"/></Navbar.Brand>
+          <Navbar.Brand href="/" style={{marginTop:"1%", marginBottom:"1%"}}><img src = "https://res.cloudinary.com/dejzdjexf/image/upload/v1636476022/esa_logo_transparent_fp2tti.png" height = "60px" alt="ESA"/></Navbar.Brand>
           <div>
           </div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -57,8 +58,9 @@ export default class NavbarComp extends Component {
             </Nav>
             <Nav>
               <Nav.Link href="#favourites"><img src="https://res.cloudinary.com/dejzdjexf/image/upload/v1636477321/love_sdy3fm.png" height = "25px"/></Nav.Link>
-              <Nav.Link href="#sign-in"> <img src="https://res.cloudinary.com/dejzdjexf/image/upload/v1636476214/user_pjvppm.png" height="25px"/>
-              </Nav.Link>
+              <Nav.Item style={{marginTop:"8%"}}> 
+                <LoginButton/>
+              </Nav.Item>
               <Nav.Link href="#cart"> <img src="https://res.cloudinary.com/dejzdjexf/image/upload/v1636475050/shopping-bag_rtxh3c.png" height = "25px"/>
               </Nav.Link>
             </Nav>
