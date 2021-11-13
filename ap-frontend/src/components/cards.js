@@ -14,31 +14,22 @@ export default class CardComp extends Component {
             borderRadius: "200px"
 
         }}>
-        <Card>
+        <Card className="text-center">
             <Card.Img variant="top" src="https://res.cloudinary.com/dejzdjexf/image/upload/v1636493197/cards.js/model01_zuoi9i.jpg" />
             <Card.Body>
             <Card.Title>Men</Card.Title>
-            <Card.Text>
-                Shop Men Here
-            </Card.Text>
             </Card.Body>
         </Card>
-        <Card>
+        <Card className="text-center">
             <Card.Img variant="top" src="https://res.cloudinary.com/dejzdjexf/image/upload/v1636493177/cards.js/model01_rzkjqc.jpg" />
             <Card.Body>
             <Card.Title>Women</Card.Title>
-            <Card.Text>
-                Shop Women Here{' '}
-            </Card.Text>
             </Card.Body>
         </Card>
-        <Card>
+        <Card className="text-center">
             <Card.Img variant="top" src="https://res.cloudinary.com/dejzdjexf/image/upload/v1636493434/cards.js/model01_svdnwt.jpg" />
             <Card.Body>
             <Card.Title>Sale</Card.Title>
-            <Card.Text>
-                Shop Sale Here
-            </Card.Text>
             </Card.Body>
         </Card>
         </CardGroup>
