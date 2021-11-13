@@ -45,5 +45,9 @@ a:link {
 }
 
 #main-navbar {
-  height: 8%;
+  height: 10%;
+}
+
+.bg-navbar-color{
+  background-color: #ede5d5;
 }

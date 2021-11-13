@@ -24,7 +24,7 @@ export default class NavbarComp extends Component {
     //   </div>
     return ( 
        
-        <Navbar id="main-navbar" fixed="top" collapseOnSelect expand="lg" bg="light" variant="light">
+        <Navbar id="main-navbar" fixed="top" collapseOnSelect expand="lg" bg="navbar-color" variant="light">
           <Container>
           <Navbar.Brand href="/"><img src = "https://res.cloudinary.com/dejzdjexf/image/upload/v1636476022/esa_logo_transparent_fp2tti.png" height = "60px" alt="ESA"/></Navbar.Brand>
           <div>
