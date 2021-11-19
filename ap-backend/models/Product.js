@@ -16,7 +16,7 @@ const ProductSchema = new mongoose.Schema({
 
 
 }, 
-{ collection: 'Products2'}
+{ collection: 'Products'}
 )
 
 const model = mongoose.model('ProductModel', ProductSchema)

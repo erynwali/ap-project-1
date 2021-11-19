@@ -5,9 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
   BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
 } from "react-router-dom";
 
 import { Auth0Provider } from "@auth0/auth0-react";

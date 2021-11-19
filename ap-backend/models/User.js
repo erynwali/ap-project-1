@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const UserSchema = new mongoose.Schema({
-    _id: { type: String, required: true},
+    // _id: { type: String, required: true},
 	name: { type: String, required: true },
 	date: {
 		type: Number,
@@ -10,7 +10,16 @@ const UserSchema = new mongoose.Schema({
 
 	age: {type: String},
 	email: {type: String},
-    address: {type: String},
+    addresses: [
+        {
+            line1: {type: String},
+            line2: {type: String},
+            city: {type: String},
+            state: {type: String},
+            country: {type: String},
+            pincode: {type: String}
+        }
+    ],
     cart: [
         {
             product_id: {type: String},

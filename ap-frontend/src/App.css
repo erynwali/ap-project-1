@@ -8,7 +8,7 @@
 }
 
 .footer {
-  background-color: #e9dbca;
+  background-color: #ede5d5;;
   text-align: center;
   padding: 20px;
   position: relative;
@@ -33,6 +33,7 @@ a:link {
 
 #main-navbar {
   height: 15%;
+  /* margin-bottom: 10%; */
   
 }
 
@@ -41,5 +42,13 @@ a:link {
 } */
 
 .bg-myRed {
-  background-color: rgb(248, 220, 246);
+  background-color: #ede5d5;
+}
+
+/* .product-display {
+  margin-top: 200%;
+} */
+
+.border-myborder {
+  borderColor: rgb(255, 0, 170);
 }

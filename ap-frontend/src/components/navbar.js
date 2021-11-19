@@ -5,64 +5,61 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import Container from 'react-bootstrap/Container'
 import { InputGroup, FormControl } from "react-bootstrap";
 import "../App.css";
-import LoginButton from "../components/login-button"
-import { useAuth0 } from "@auth0/auth0-react";
+import LoginButton from "./login-button";
+import SearchBar from "./search";
 
-// const LoginButton = function() {
-//   const { loginWithRedirect } = useAuth0();
-//   return (
-//     // <button onClick={() => loginWithRedirect()}>Login</button>
-//   )}
 
 export default class NavbarComp extends Component {
 
     
   render() {
 
-    // <div style = {{marginTop: "10%"}}>
-    //   {LoginButton()}
-      
-    //   </div>
+    
     return ( 
        
         <Navbar id="main-navbar" fixed="top" collapseOnSelect expand="lg" bg="myRed" variant="light">
           <Container>
-          <Navbar.Brand href="/" style={{marginTop:"1%", marginBottom:"1%"}}><img src = "https://res.cloudinary.com/dejzdjexf/image/upload/v1636476022/esa_logo_transparent_fp2tti.png" height = "60px" alt="ESA"/></Navbar.Brand>
+          <Navbar.Brand href="/" style={{marginTop:"1%", marginBottom:"1%"}}><img src ="https://res.cloudinary.com/dejzdjexf/image/upload/v1636476022/esa_logo_transparent_fp2tti.png" height = "60px" alt="ESA"/></Navbar.Brand>
           <div>
           </div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <NavDropdown title="Men" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Tops</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Bottoms</NavDropdown.Item>
+                <NavDropdown.Item href="/men/tshirts">Tshirts</NavDropdown.Item>
+                <NavDropdown.Item href="/men/jeans">Jeans</NavDropdown.Item>
+                <NavDropdown.Item href="/men/trousers">Trousers</NavDropdown.Item>
+                <NavDropdown.Item href="/women/shirts">Shirts</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">View All</NavDropdown.Item>
+                <NavDropdown.Item href="/men">View All</NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Women" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Tops</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Bottoms</NavDropdown.Item>
+                <NavDropdown.Item href="/women/tshirts">Tshirts</NavDropdown.Item>
+                <NavDropdown.Item href="/women/jeans">Jeans</NavDropdown.Item>
+                <NavDropdown.Item href="/women/trousers">Trousers</NavDropdown.Item>
+                <NavDropdown.Item href="/women/shirts">Shirts</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">View All</NavDropdown.Item>
+                <NavDropdown.Item href="/women">View All</NavDropdown.Item>
               </NavDropdown>
             </Nav>
             <Nav style =
             {{ paddingTop: "17px", 
-              paddingRight: "20px"
+              marginRight: "5%"
             }}
             >
-              <InputGroup size="sm" className="mb-3">
+              {/* <InputGroup size="sm" className="mb-3">
               <InputGroup.Text id="inputGroup-sizing-sm"><img src="https://res.cloudinary.com/dejzdjexf/image/upload/v1636482159/search_wcbj6u.png" height="20px"/></InputGroup.Text>
               <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
-              </InputGroup>
+              </InputGroup> */}
+              <SearchBar/>
             </Nav>
-            <Nav>
-              <Nav.Link href="#favourites"><img src="https://res.cloudinary.com/dejzdjexf/image/upload/v1636477321/love_sdy3fm.png" height = "25px"/></Nav.Link>
-              <Nav.Item style={{marginTop:"8%"}}> 
-                <LoginButton/>
+            <Nav style={{marginRight:"10%"}}>
+              <Nav.Item style={{marginLeft:"5%", marginRight:"10%"}}> 
+                <LoginButton/> 
               </Nav.Item>
-              <Nav.Link href="#cart"> <img src="https://res.cloudinary.com/dejzdjexf/image/upload/v1636475050/shopping-bag_rtxh3c.png" height = "25px"/>
-              </Nav.Link>
+              <Nav.Item style={{marginRight:"5%"}}>Favorites</Nav.Item>
+              <Nav.Item style={{marginLeft: "5%", marginRight:"5%"}}> Cart
+              </Nav.Item>
             </Nav>
           </Navbar.Collapse>
           </Container>

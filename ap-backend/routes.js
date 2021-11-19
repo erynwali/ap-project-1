@@ -9,6 +9,7 @@ const User = require('./models/User');
 const Product = require('./models/Product');
 const PORT = 3080;
 
+
 var GoogleStrategy = require('passport-google-oauth20').Strategy;
 const GOOGLE_CLIENT_ID = "143028299259-vbsfm4q97b8gqaah7a8oo1jtm6v5demv.apps.googleusercontent.com";
 const GOOGLE_CLIENT_SECRET = "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";
@@ -17,7 +18,7 @@ const passportLocal = require("passport-local").Strategy;
 
 // connect to server
 
-mongoose.connect('mongodb+srv://asura:asdfg@cluster0.udjat.mongodb.net/testdb?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://asura:asdfg@cluster0.udjat.mongodb.net/Database?retryWrites=true&w=majority',
 {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -45,29 +46,9 @@ function(accessToken, refreshToken, profile, cb) {
 }
 ));
 
-app.get('/auth/google',
-  passport.authenticate('google', { scope: ['profile', 'email'] }));
 
-app.get('/auth/google/callback', 
-  passport.authenticate('google', { failureRedirect: '/login' }),
-  function(req, res) {
-    // Successful authentication, redirect home.
-    res.redirect('/');
-  });
 
-app.post("/login", (req, res, next) => {
-  passport.authenticate("local", (err, user, info) => {
-    if (err) throw err;
-    if (!user) res.send("User does not exist!");
-    else {
-      req.logIn(user, (err) => {
-        if (err) throw err;
-        res.send("Successfully logged in!");
-        //console.log(req.user);
-      });
-    }
-  })(req, res, next);
-});
+
 
 // ----------------------------------------------------------------
 // ----------------------------------------------------------------
@@ -77,12 +58,24 @@ app.post("/login", (req, res, next) => {
 // routes for users
 app.post('/addUser', async (req, res) => {
     const record = req.body;
-
-    const response = await User.create(record);
-
-    console.log(response);
+    const check = await User.find({email:record.email}).size();
+    console.log(check.length);
+    if (check.length==0) {
+      const response = await User.create(record);
+      console.log(response);
 
     res.json({ status: 'ok' });
+    }
+    
+
+
+    
+});
+
+app.get('/getUsers', async (req, res) => {
+	const records = await Product.find({});
+	console.log('Response => ', records);
+	res.json(records);
 });
 
 app.post('/removeUser', async (req, res) => {
@@ -97,11 +90,6 @@ app.post('/removeUser', async (req, res) => {
 	res.json({ status: 'ok' });
 });
 
-app.get('/getUsers', async (req, res) => {
-	const records = await User.find({});
-	console.log('Response => ', records);
-	res.json(records);
-});
 
 // update User details
 
@@ -237,7 +225,7 @@ app.post('/removeProduct', async (req, res) => {
 	res.json({ status: 'ok' });
 });
 
-app.get('/getProduct', async (req, res) => {
+app.get('/getProducts', async (req, res) => {
 	const records = await Product.find({});
 	console.log('Response => ', records);
 	res.json(records);
@@ -260,32 +248,61 @@ app.post('/changePrice', async (req, res) => {
 
 // Routes for search
 
-//Search by term
-app.get('/search/ByTerm', async (req, res) => {
-  const term = req.body.term;
 
-  Product.find(
+
+
+
+app.get('/search/byterm/:term', async (req, res) => {
+  const term = req.params.term;
+  if (term === '') {
+    const records = Product.find({});
+    console.log('Response => ', records);
+	res.json(records);
+
+  } else {
+    const records = await Product.find(
     {$or: [{name: {$regex: term, $options: '<i>'}} , {category : {$regex: term, $options: '<i>'}}]}
     );
 
+    console.log('Response => ', records);
+    res.json(records);
+  }
+	
 });
+
 
 // Search by gender
 
-app.get('/search/ByGender', async (req, res) => {
-  const gender = req.body.gender;
+app.get('/search/gender/:term', async (req, res) => {
+  const gender = req.params.term;
 
-  Product.find({gender: gender});
+  const records = await Product.find({gender: gender});
+	console.log('Response => ', records);
+	res.json(records);
     
   });
 
-// Search by category
+// // Search by category
 
-app.get('/search/ByCategory', async (req, res) => {
-  const gender = req.body.gender;
-  const category = req.body.category
+app.get('/search/men/:category', async (req, res) => {
+  // const gender = req.params.gender;
+  const category = req.params.category
 
-  Product.find({$and: [ {gender: {$regex: gender}} , {category : {$regex: term, $options: '<i>'}} ] });
+  const records = await Product.find({$and: [ {gender: {$regex: 'Men'}} , {$or: [{category : {$regex: category, $options: '<i>'} },{name: {$regex: category, $options: '<i>'} }] } ] });
+  console.log('Response => ', records);
+	res.json(records);
+
+
+});
+
+app.get('/search/women/:category', async (req, res) => {
+  // const gender = req.params.gender;
+  const category = req.params.category
+
+  const records = await Product.find({$and: [ {gender: {$regex: 'Women'}} , {category : {$regex: category, $options: '<i>'}} ] });
+  console.log('Response => ', records);
+	res.json(records);
+
 
 });
 

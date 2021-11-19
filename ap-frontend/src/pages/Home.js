@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import "../App.css";
-import {Link} from 'react-router-dom';
 import CarouselComp from "../components/carousel";
 import CardComp from "../components/cards";
-import LoginButton from "../components/login-button";
-import Profile from "../components/profile";
-import { useAuth0 } from '@auth0/auth0-react';
+import CirclesComp from "../components/circles";
 
 
 export default class Home extends Component {
@@ -14,14 +11,24 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div style={{marginBottom: "5%"}}>
-          
-          {/* <CarouselComp/>
-          
-          <CardComp/> */}
-
-        
-          {/* <Profile/> */}
+      <div style={{marginBottom: "5%", marginTop: "10%"}}>
+          <CarouselComp/>
+          <div>
+          <div style={{ 
+            marginLeft:"10%", 
+            marginTop:"5%",
+            marginRight:"10%"
+          }}>
+          <h1 style={{
+            textAlign:"center", 
+            marginBottom: "2%",
+          }}> FEATURED </h1>
+            <CirclesComp/>
+          </div>
+          </div>
+          <div>
+            <CardComp />
+          </div>
 
        
       </div>
