@@ -21,7 +21,7 @@ export default class NavbarComp extends Component {
     
     return ( 
        
-        <Navbar class="navbar-custom" fixed="top" collapseOnSelect expand="lg" variant="light" bg="light">
+
           <Container>
           <Navbar.Brand href="/" ><img src = "https://res.cloudinary.com/dejzdjexf/image/upload/v1636476022/esa_logo_transparent_fp2tti.png" height = "60px" alt="ESA" style={{marginTop:"10%"}}/></Navbar.Brand>
           <div>
@@ -44,7 +44,7 @@ export default class NavbarComp extends Component {
             </Nav>
             <Nav style =
             {{ paddingTop: "17px", 
-              paddingRight: "20px"
+              paddingRight: "20px", 
             }}
             >
               <InputGroup size="sm" className="mb-3">

@@ -1,4 +1,3 @@
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import React, { Component, Container } from "react";
 import {
@@ -17,27 +16,16 @@ import ContactUs from "./pages/ContactUs";
 import Results from "./pages/Results";
 import { useAuth0 } from "@auth0/auth0-react";
 import CardComp from './components/cards';
-import ProductCardComp from './components/product-card'
 
-function App() {
-
-  
-
-  
-
-  return (
-    <div>
-  
-      <NavbarComp />   
-      
       <Routes> 
       
       <Route exact path="/" element={<Home/>}/>
       <Route exact path="/about-us" element={<AboutUs/>}/>
       <Route exact path="/contact-us" element={<ContactUs/>}/>
       <Route exact path="/terms-and-conditions" element={<TnC/>}/>
-      <Route exact path="/results" element={<Results/>}/>
 
+
+     
       </Routes>
 
 
