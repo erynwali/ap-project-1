@@ -18,15 +18,12 @@ export default class NavbarComp extends Component {
     
   render() {
 
-    // <div style = {{marginTop: "10%"}}>
-    //   {LoginButton()}
-      
-    //   </div>
+    
     return ( 
        
-        <Navbar id="main-navbar" fixed="top" collapseOnSelect expand="lg" bg="navbar-color" variant="light">
+
           <Container>
-          <Navbar.Brand href="/"><img src = "https://res.cloudinary.com/dejzdjexf/image/upload/v1636476022/esa_logo_transparent_fp2tti.png" height = "60px" alt="ESA"/></Navbar.Brand>
+          <Navbar.Brand href="/" ><img src = "https://res.cloudinary.com/dejzdjexf/image/upload/v1636476022/esa_logo_transparent_fp2tti.png" height = "60px" alt="ESA" style={{marginTop:"10%"}}/></Navbar.Brand>
           <div>
           </div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -52,7 +49,7 @@ export default class NavbarComp extends Component {
             >
               <InputGroup size="sm" className="mb-3">
               <InputGroup.Text id="inputGroup-sizing-sm"><img src="https://res.cloudinary.com/dejzdjexf/image/upload/v1636482159/search_wcbj6u.png" height="20px"/></InputGroup.Text>
-              <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+              <FormControl placeholder="Search" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
               </InputGroup>
             </Nav>
             <Nav>

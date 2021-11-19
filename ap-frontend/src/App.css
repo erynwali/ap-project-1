@@ -44,10 +44,17 @@ a:link {
   grid-gap: 10px;
 }
 
-#main-navbar {
-  height: 10%;
-}
 
-.bg-navbar-color{
-  background-color: #ede5d5;
+
+.product-card-title {
+  
+  font-family: "Quicksand";
+  font-weight: bold;
+  text-align: center;
+  
+}
+.product-card-text {
+  font-family: "Quicksand";
+  text-align: center;
+  margin-bottom: "500px";
 }

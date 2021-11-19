@@ -12,17 +12,10 @@ import CarouselComp from './components/carousel';
 import TnC from "./pages/T&C";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
-import ContactUs from "./pages/ContactUs"
+import ContactUs from "./pages/ContactUs";
+import Results from "./pages/Results";
 import { useAuth0 } from "@auth0/auth0-react";
 import CardComp from './components/cards';
-import Product from './pages/Product';
-
-function App() {
-  return (
-    <div> 
-      
-      <NavbarComp />  
-      
 
       <Routes> 
       
@@ -30,13 +23,13 @@ function App() {
       <Route exact path="/about-us" element={<AboutUs/>}/>
       <Route exact path="/contact-us" element={<ContactUs/>}/>
       <Route exact path="/terms-and-conditions" element={<TnC/>}/>
-      <Route exact path="/product-1" element={<Product/>}/>
+
 
      
       </Routes>
 
 
-      
+      {/* <ProductCardComp/> */}
 
       <FooterComp />
       </div>
