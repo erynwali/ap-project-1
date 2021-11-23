@@ -22,6 +22,9 @@ export default class FooterComp extends Component{
             <Nav.Link href="contact-us">
                 Contact Us
             </Nav.Link>
+            <Nav.Link href="product">
+                Sample Product Page
+            </Nav.Link>
         </div> 
         </div>
       </div>
