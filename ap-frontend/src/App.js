@@ -30,6 +30,7 @@ import WomenShirts from './pages/products/Women/Women-Shirts';
 import SearchBar from './components/search';
 import Profile from './pages/Profile';
 import Product from './pages/Product'
+import Cart from './pages/Cart'
 
 
 
@@ -61,6 +62,7 @@ function App() {
       <Route exact path="/men/shirts" element={<MenShirts/>}/>
       <Route exact path="/women/shirts" element={<WomenShirts/>}/>
       <Route exact path="/product" element={<Product />}/>
+      <Route exact path="/cart" element={<Cart />}/>
 
 
       </Routes>
